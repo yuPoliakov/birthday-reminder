@@ -21,7 +21,6 @@ const connect = async (config) => {
 }
 
 const createOrUpdate = async (email, reminders) => {
-    console.log('CREAT OR UPDATE');
     return db.collection('users').updateOne(
         { email: email.toLowerCase() },
         { $push: { reminders: reminders } },

@@ -1,7 +1,19 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+    app: {
+        head: {
+            link: [
+                { rel: 'icon', type: 'image/svg+xml', href: 'favicon.png' }
+            ],
+            meta: [
+                { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+                { name: 'description', content: 'Birthday Reminder. Get a reminder to not forgive you friend\'s birthday' },
+            ],
+            title: 'Birthday Reminder'
+        }
+    },
     runtimeConfig: {
-        env: 'prod',
+        env: 'dev',
         emailUser: process.env.EMAIL_USER,
         emailPass: process.env.EMAIL_PASS,
         emailService: process.env.EMAIL_SERVICE,
