@@ -13,7 +13,7 @@ export default defineNuxtConfig({
         }
     },
     runtimeConfig: {
-        env: 'dev',
+        env: 'prod',
         emailUser: process.env.EMAIL_USER,
         emailPass: process.env.EMAIL_PASS,
         emailService: process.env.EMAIL_SERVICE,
